@@ -1,8 +1,5 @@
 package datastructures;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
 public class Queue<T>{
     private static final int DEFAULT_CAPACITY = 10;
     private T[] arr;
@@ -73,8 +70,16 @@ public class Queue<T>{
         return this.back;
     }
 
+    @SuppressWarnings("unchecked")
     private void growSize(int new_capacity){
+        T[] new_arr = (T[])new Object[new_capacity];
+        for(int i = 0; i < new_capacity; i++){
+            if(i < this.capacity)
+            new_arr[i] = this.arr[i];
+            else
+            new_arr[i] = null;
+        }
         this.capacity = new_capacity;
-        this.arr = Arrays.copyOf(this.arr, new_capacity);
+        this.arr = new_arr;
     }
 }

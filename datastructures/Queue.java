@@ -82,4 +82,16 @@ public class Queue<T>{
         this.capacity = new_capacity;
         this.arr = new_arr;
     }
+
+    //prints all non null elements of stack 
+    public void printStack(){
+        for(int i = this.front-1; i < this.back;i++)
+        System.out.println(this.arr[i]+" \t");
+    }
+
+    //prints ALL elements of stack 
+    public void printEntireStack(){
+        for(int i = 0; i < this.capacity;i++)
+        System.out.println(this.arr[i]+" \t");        
+    }
 }

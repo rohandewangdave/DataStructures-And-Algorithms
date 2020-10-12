@@ -1,11 +1,12 @@
-import datastructures.Stack;
+import datastructures.Queue;
 public class Main {
     public static void main(String args[]){
-        Stack<Integer> obj = new Stack<Integer>();
-        obj.push(100);
-        obj.push(200);
-        System.out.println(obj.pop());
-        System.out.println(obj.peek());
+        Queue<Integer> q = new Queue<Integer>(2);
+        q.enqueue(10);
+        q.enqueue(20);
+        System.out.println(q.isFull());
+        q.enqueue(30);
+
+        System.out.println(q.checkCapacity());
     }
-    
 }

@@ -22,7 +22,6 @@ public class Stack<T>{
     }
 
     public void push(T value){
-        //if(this.top >= this.arr.length)
         if(this.isFull())
         growSize(this.arr.length*2);
 

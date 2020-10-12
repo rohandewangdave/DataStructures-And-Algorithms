@@ -32,7 +32,9 @@ public class Queue<T>{
         if(this.isEmpty())
         return null;
 
-        return this.arr[this.front++];
+        T value = this.arr[front];
+        this.arr[this.front++] = null;
+        return value;
     }
 
     public T peekFront(){

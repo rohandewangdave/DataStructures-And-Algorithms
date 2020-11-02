@@ -54,17 +54,17 @@ public class Job {
         }
         return maximum;
     }
-    public static String[] sequence(int D[],int P[],String J[]){
-        int[] res = new int[max(D)];
+    public String[] sequence(){
+        int[] res = new int[max(this.D)];
         String[] resJ = new String[res.length];
-        res[D[0]-1] = P[0];
-        resJ[D[0]-1] = J[0];
+        res[this.D[0]-1] = this.P[0];
+        resJ[this.D[0]-1] = this.J[0];
 
-        for(int i = 1; i < D.length;i++){
-            for(int j = D[i] - 1; j >= 0 ; j--){
+        for(int i = 1; i < this.D.length;i++){
+            for(int j = this.D[i] - 1; j >= 0 ; j--){
                 if(res[j] == 0){
-                    res[j] = P[i];
-                    resJ[j] = J[i]; 
+                    res[j] = this.P[i];
+                    resJ[j] = this.J[i]; 
                 }
             }
         }

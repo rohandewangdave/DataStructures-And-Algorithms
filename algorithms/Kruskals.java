@@ -16,7 +16,7 @@ class Graph{
     int e;
     boolean isBidirectional;
     Graph(int n,int e){
-        edges = new Edge[e];
+        this.edges = new Edge[e];
         this.n = n;
         this.e = e;
         this.pos = 0;
@@ -39,11 +39,13 @@ class Graph{
             System.out.println(edge.a+"<->"+edge.b+" "+edge.weight);            
         }
     }
+
+    
 }
 
 class Kruskals{
     public static void main(String args[]){
-        Graph g = new Graph(4,7);
+        Graph g = new Graph(5,14);
         g.createEdge(0,1,2);
         g.createEdge(0,3,6);
 
